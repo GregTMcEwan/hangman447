@@ -1,19 +1,61 @@
-# Hangman
+# Hangman Game
 
-## Introduction
+### Table of Contents
+- [Project Description](#project-description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [License](#license)
 
-Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
+---
 
-This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
+## Project Description
+
+This project is a simple command-line **Hangman Game** implemented in Python. It allows the user to guess letters of a randomly chosen word from a predefined word list. The user has a limited number of lives, and the goal is to guess the word before running out of lives.
+
+### Project Aim
+- The aim of this project is to practice Python class structures, conditional logic, loops, and working with lists and strings.
+- By building this project, I learned how to encapsulate game logic within a class, manage user input, and update game state efficiently.
+
+### Features:
+- Randomly selects a word from a word list.
+- Allows the user to guess one letter at a time.
+- Tracks user guesses and prevents duplicate guesses.
+- Displays remaining lives after incorrect guesses.
+- Displays the current state of the guessed word after each valid guess.
+
+---
 
 ## Installation
 
-Download and run the python file to play!
+To run this Hangman game on your local machine clone the repository and run the hangman.py file
+
+**Ensure you have Python3 installed.**
+
+---
 
 ## Usage
 
-The game will generate a secret word at random on program start. Input a single character as a guess and the game will automatically check if that guess is in the secret word!
+To start the game, simply run the hangman.py file
+### Example Gameplay
+```Gameplay
+Please guess a letter: e
+Good guess! e is in the word!
+['_', '_', '_', '_', 'e']
+Please guess a letter: r
+Sorry, the letter r is not in the word. 
+You have 4 lives left.
+```
+The game will continue until you either correctly guess the word, or run out of lives. 
 
-## Structure
+---
 
-## Licensing
+## File Structure
+
+tbd
+
+---
+
+## License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this project, as long as you include the original copyright and license information.
