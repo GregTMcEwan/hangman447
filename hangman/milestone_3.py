@@ -5,7 +5,7 @@ print(word_list)
 word = random.choice(word_list)
 print(word)
 
-def get_user_guess(): # Function that prompts the user to input a guess, validates it is a single non number character and returns it
+def ask_for_input(): # Function that prompts the user to input a guess, validates it is a single non number character and returns it
     while True:
         guess = input("Input your guess: ")
         if len(guess) == 1 and guess.isdigit() == False:
@@ -14,8 +14,8 @@ def get_user_guess(): # Function that prompts the user to input a guess, validat
         else:
             print("Invalid letter. Please, enter a single alphabetical character.")
 
-user_guess = get_user_guess()
-def check_user_guess(word, user_guess): ## Checks how many times the users guess appears in the secret word
+user_guess = ask_for_input()
+def check_guess(word, user_guess): ## Checks how many times the users guess appears in the secret word
     word=word.lower()
     user_guess = user_guess.lower() # Sets the user's guess and computer word to all lowercase for easier comparisons
     times_in_word = 0
@@ -29,6 +29,6 @@ def check_user_guess(word, user_guess): ## Checks how many times the users guess
     return 
 
 
-check_user_guess(word ,user_guess)
+check_guess(word ,user_guess)
 
 
