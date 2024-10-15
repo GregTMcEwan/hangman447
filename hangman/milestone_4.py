@@ -6,22 +6,26 @@ class Hangman:
         self.word_list = word_list
         self.word = random.choice(word_list)
         self.word_guessed = []
-        self.num_letters = int
+        for c in self.word:
+           self.word_guessed.append("_")
+        self.num_letters = len(set(self.word))
         self.num_lives = num_lives
         self.list_of_guesses = []
 
     def check_guess(self, guess):
-        print("Here")
         word=self.word.lower()
         guess = guess.lower() # Sets the user's guess and computer word to all lowercase for easier comparisons
-        times_in_word = 0
-        for char in word:
-            if char==guess:
-                times_in_word +=1
-        if times_in_word > 0:
-            print(f"Good guess! {guess} is in the word {times_in_word} times")
+        if guess in word:
+            print(f"Good guess! {guess} is in the word!")
+            for i in range(len(word)):
+                if word[i]==guess:
+                    self.word_guessed[i]=guess
+                    print(str(self.word_guessed))
+            self.num_letters -= 1
+            print(self.num_letters)
         else:
-            print(f"Sorry, {guess} is not in the word. Try again.")
+            self.num_lives -=1
+            print(f"Sorry, {guess} is not in the word. \n You have {self.num_lives} lives left.")
         return 
     
     def ask_for_input(self):
