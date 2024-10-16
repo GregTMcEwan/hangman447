@@ -36,7 +36,7 @@ To run this Hangman game on your local machine clone the repository and run the 
 
 ## Usage
 
-To start the game, simply run the hangman.py file
+To start the game, simply run the milestone_5.py file
 ### Example Gameplay
 ```Gameplay
 Please guess a letter: e
@@ -51,9 +51,17 @@ The game will continue until you either correctly guess the word, or run out of 
 ---
 
 ## File Structure
-
-tbd
-
+```
+hangman447/
+│
+├── hangman/
+│   ├── hangman_Template.py
+│   ├── milestone_2.py
+│   ├── milestone_3.py
+│   ├── milestone_4.py
+│   ├── milestone_5.py
+└── README.md
+```
 ---
 
 ## License
